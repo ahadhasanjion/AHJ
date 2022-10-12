@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Components/Main/Main';
 import Header from './Components/Header/Header';
 import Blog from './Components/Blog/Blog';
+import Statistics from './Components/Statistics/Statistics';
 
 function App() {
 
