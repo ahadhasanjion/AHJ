@@ -1,8 +1,41 @@
 import React, { useContext } from "react";
 import {Bar,BarChart,CartesianGrid,Legend,Line,LineChart,Pie,PieChart,Tooltip,XAxis,YAxis,
 } from "recharts";
-import { CodeContext } from "./Root";
-
+import { CodeContext } from "../Root/Root";
+const data = [
+    {
+        name: 'start',
+        uv: 0,
+    },
+    {
+        name: 'React',
+        uv: 8,
+    },
+    {
+        name: 'Java script',
+        uv: 9,
+    },
+    {
+        name: 'CSS',
+        uv: 12,
+    },
+    {
+        name: 'GIT',
+        uv: 15,
+    },
+    {
+        name: 'BOOTSTRAP',
+        uv: 18,
+    },
+    {
+        name: 'tAILWIND',
+        uv: 23,
+    },
+    {
+        name: 'OTHER',
+        uv: 34,
+    },
+];
 const Statistics = () => {
   const data = useContext(CodeContext);
 
