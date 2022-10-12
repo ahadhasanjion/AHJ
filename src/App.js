@@ -3,9 +3,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Components/Main/Main';
 import Header from './Components/Header/Header';
-import Statistics from './Components/Statistics/Statistics';
 import Blog from './Components/Blog/Blog';
-import Quizs from './Components/Quizs/Quizs';
 
 function App() {
 
