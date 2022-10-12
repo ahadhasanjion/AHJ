@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Quiz = ({ data }) => {
-  const { name, logo, id, } = data;
+  const { name, logo, total,id } = data;
 
   return (
     <div className="">
@@ -11,12 +11,11 @@ const Quiz = ({ data }) => {
           className="mb-6 rounded shadow-lg  bg-black"
           src={logo}
           alt=""
-
         />
         <p className="mb-2 text-xl font-bold leading-none sm:text-2xl">
           {name}
         </p>
-
+        <p className="font-bold">Question : {total}</p>
         <Link to={`../quiz/${id}`}>
           {" "}
           <button

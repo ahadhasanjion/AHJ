@@ -1,4 +1,7 @@
 import Swal from "sweetalert2";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faEye} from '@fortawesome/free-solid-svg-icons';
+
 const Qdetails = ({ data, setRight, setWrong }) => {
   const { options, id, question, correctAnswer } = data;
 
@@ -25,6 +28,7 @@ const Qdetails = ({ data, setRight, setWrong }) => {
     <div>
       <div className="w-50 h-50 mt-5 py-8 text-blue-900 ">
         <button onClick={() => showCorrectAnswer(correctAnswer)}>
+          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
         </button>
         <div dangerouslySetInnerHTML={{ __html: question }}></div>
         <div className=" my-3 mx-24">
