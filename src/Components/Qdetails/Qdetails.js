@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import { Icon } from "@iconify/react";
 const Qdetails = ({ data, setRight, setWrong }) => {
   const { options, id, question, correctAnswer } = data;
 
@@ -7,7 +6,7 @@ const Qdetails = ({ data, setRight, setWrong }) => {
     Swal.fire(correctAnswer);
   };
 
-  const handleCorrectAnswer = (correctAnswer, option) => {
+  const handleAnswer = (correctAnswer, option) => {
     if (option !== correctAnswer) {
       Swal.fire({
         title: "Wrong!",
@@ -24,18 +23,17 @@ const Qdetails = ({ data, setRight, setWrong }) => {
 
   return (
     <div>
-      <div className="w-70 h-70 mt-5 py-8 text-green-700 ">
+      <div className="w-50 h-50 mt-5 py-8 text-blue-900 ">
         <button onClick={() => showCorrectAnswer(correctAnswer)}>
-          <Icon icon="fontisto:eye" width="25" height="25" />
         </button>
         <div dangerouslySetInnerHTML={{ __html: question }}></div>
-        <div className=" my-4 mx-24">
+        <div className=" my-3 mx-24">
           <div className="grid lg:grid-cols-2 sm:cols-1 md:col-1  border-rounded-4 gap-2 list-none">
             {options.map((option, index) => (
               <li
                 key={index}
-                onClick={() => handleCorrectAnswer(correctAnswer, option)}
-                className="border py-3 hover:bg-green-400 cursor-pointer"
+                onClick={() => handleAnswer(correctAnswer, option)}
+                className="border py-3 hover:bg-blue-500 cursor-pointer"
               >
                 {option}
               </li>
